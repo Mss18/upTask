@@ -1,4 +1,4 @@
-exports.proyectosHomme = (req, res) => {
+exports.proyectosHome = (req, res) => {
     res.render('index', {
        nombrePagina: 'Proyectos' 
     });
@@ -12,7 +12,7 @@ exports.formularioProyecto = (req, res) => {
 
 exports.nuevoProyecto = (req, res) => {
     //Mostrar por consola texto de usuario
-    // console.log(req.body);
+    console.log(req.body);
 
     //validar que el input no esté vacio
     const { nombre } = req.body;
@@ -29,5 +29,9 @@ exports.nuevoProyecto = (req, res) => {
             nombrePagina: 'Nuevo Proyecto',
             errores
         })
+    
+        
+    } else {
+        //si no hay errores, insertamos en la BD
     }
 }

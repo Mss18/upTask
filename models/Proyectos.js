@@ -1,4 +1,4 @@
-const Sequelize = reequire('sequelize');
+const Sequelize = require('sequelize');
 
 const db = require('../config/db');
 
@@ -8,8 +8,10 @@ const Proyectos = db.define('proyectos', {
         primaryKey: true,
         autoIncrement: true
     },
+
     nombre: Sequelize.STRING,
-    url: Sequelize.STRING
+    url: Sequelize.STRING    
+
 });
 
 module.exports = Proyectos;
