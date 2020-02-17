@@ -1,8 +1,12 @@
 const Proyectos = require('../models/Proyectos');
 
-exports.proyectosHome = (req, res) => {
+
+exports.proyectosHome = async(req, res) => {
+    const proyectos = await Proyectos.findAll();
+
     res.render('index', {
-       nombrePagina: 'Proyectos' 
+       nombrePagina: 'Proyectos',
+       proyectos 
     });
 }
 
@@ -35,6 +39,7 @@ exports.nuevoProyecto = async(req, res) => {
         
     } else {
         //si no hay errores, insertamos en la BD
+        // const url = slug(nombre).toLowerCase();
         const proyecto = await Proyectos.create({ nombre });
         res.redirect('/');
     }
