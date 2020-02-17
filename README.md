@@ -1,2 +1,4 @@
 # upTask
-Proyecto upTask con Node JS y template engine PUG
+### Proyecto upTask con Node JS
+### Template engine: PUG
+### ORM: Sequelize
