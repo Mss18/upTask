@@ -35,6 +35,13 @@ app.use((req, res, next) => {
     next();
 });
 
+//middleware para pasar el año
+/* app.use((req, res, next) => {
+    const fecha = new Date();
+    res.locals.year = fecha.getFullYear;
+    next();
+}); */
+
 //bodyParser para datos del formulario
 app.use(bodyParser.urlencoded({extended: true}));
 
